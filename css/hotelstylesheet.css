@@ -1,0 +1,508 @@
+/* Estilos generales */
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-color:  #e6dfc6;
+
+}
+
+/* Estilo del contenedor del slider */
+.slider {
+    position: relative;
+    max-width: 100%;
+    height: 500px; /* Ajusta la altura según tus preferencias */
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #000; /* Color de fondo para mejor contraste */
+}
+
+/* Estilo de las imágenes dentro del slider */
+.slider .slide img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain; /* Cambia a "cover" si deseas que las imágenes llenen todo el área */
+}
+
+/* Ocultar todas las imágenes excepto la activa */
+.slide {
+    display: none;
+}
+
+/* Mostrar la primera imagen por defecto */
+.slide:first-child {
+    display: block;
+}
+
+/* Estilo de los botones de navegación */
+.prev, .next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(255, 255, 255, 0.5); /* Fondo semitransparente */
+    color: black;
+    padding: 10px;
+    cursor: pointer;
+    border: none;
+    font-size: 24px;
+    font-weight: bold;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Posición de los botones */
+.prev {
+    left: 10px;
+}
+
+.next {
+    right: 10px;
+}
+
+/* Transición suave al cambiar entre imágenes */
+.slide img {
+    transition: opacity 0.5s ease;
+}
+
+
+h1
+{
+    color: #1b2e28;
+    text-align: center;
+}
+
+#informacion-hotel {
+    padding: 20px;
+    text-align: center;
+}
+
+/* Testimonios */
+#testimonios {
+    background-color: #5e968f;
+    padding: 20px;
+    text-align: center;
+    border: #1b2e28 dotted 3px;
+}
+
+#testimonios .testimonio {
+    margin: 10px;
+    font-style: italic;
+    text-align: center;
+}
+
+.slider-testimonios {
+    position: relative;
+    max-width: 100%;
+    overflow: hidden;
+    background-color: #f4f4f4;
+    padding: 20px;
+    text-align: center;
+}
+
+/* Cada testimonio */
+.slide-testimonio {
+    display: none; /* Ocultar por defecto */
+}
+
+/* Mostrar el primer testimonio por defecto */
+.slide-testimonio:first-child {
+    display: block;
+}
+
+/* Botones de navegación para testimonios */
+.prev-testimonio, .next-testimonio {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(255, 255, 255, 0.5);
+    color: black;
+    padding: 10px;
+    cursor: pointer;
+    border: none;
+    font-size: 24px;
+    font-weight: bold;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+}
+
+.prev-testimonio {
+    left: 10px;
+}
+
+.next-testimonio {
+    right: 10px;
+}
+
+/* Redes Sociales */
+#redes-sociales {
+    text-align: center;
+    padding: 10px;
+}
+
+#redes-sociales .redes a {
+    margin: 0 10px;
+    text-decoration: none;
+    color: #3b5998;
+    font-weight: bold;
+}
+
+#container
+{
+    display: flex; /*es flexible a los dispositivos, inline todos los elementos en linea y block se despliegan como un bloque*/
+    align-items: center;/*alineacion de elementos segun lo indicado*/
+    justify-content:center; /*Se le encarga al navegador la distribucion del espacio*/
+    margin: 0; /*margin: 0px, 50px// 12 arriba, 3 derecha, 6 abajo, 9 derecha*/
+    padding: 0; /*espaciado interno desde el borde interior*/
+    min-width: 100vw;
+    min-height: 100vh;
+    width: 90%; /*ancho en relacion al body*/
+    height: 100%; /*alto en relacion al body*/
+    background-image: url(../imagenes/background.jpeg); /*definimos una imagen de fondo para el contenedor*/
+    background-color: #e6dfc6;
+    background-size: cover; /*cover escala al mayor tamaño posible, contain no estira ni recorta*/
+    
+}
+
+#centralcontainer
+{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column; /*direccion del contenido, si es row se llena de izq a der*/
+    min-width: 380px;
+    min-height: 900px;
+    width: 90%;
+    padding: 30px;
+    background-color: #e6dfc6;
+    opacity: 0.8; /*la transparencia se define entre 0.0 a 1.0*/
+    filter:alpha(opacity=80);
+    box-shadow: 0px,0px, 10px, 10px rgba(0, 0, f, 0.5); /*css standard*/
+    -webkit-box-shadow: 0px, 0px, 10px, 10px rgba(0, 0, f, 0.5); /*Chrome y Safari*/
+    -moz-box-shadow: 0px, 0px, 10px, 10px rgba(0, 0, f, 0.5); /*mozilla*/
+
+    border-radius: 10px, 10px, 10px, 10px;
+    -webkit-border-radius:10px, 10px, 10px, 10px;
+    -moz-border-radius:10px, 10px, 10px, 10px;
+}
+
+
+hr{
+    border-top: 3px solid rgb(243, 91, 9);
+    border-bottom: 2px solid rgb(2, 10, 61);
+}
+
+.footer{
+    display: block;
+    font-size: 90%;
+    text-align: center;
+    margin-bottom: 5px;
+
+}
+
+.footer a{
+    display: block;
+    color: #FFF;
+}
+
+.footer a:hover{
+    display: block;
+    color: #FFF;
+    font-size:140%
+}
+
+#descripcion {
+    text-align: center;
+    margin-bottom: 20px;
+    color: white;
+}
+
+#descripcion h1 {
+    font-size: 200%;
+    color: rgb(255, 255, 255);
+    margin-bottom: 10px;
+}
+
+#descripcion p {
+    font-size: 150%;
+    color: rgb(255, 255, 255);
+}
+
+@media all and (max-width:1000px)
+{
+    #contenedorcentrado{
+        flex-direction: row-reverse; /*row | column | column-reverse*/
+        min-width: 850px;
+        max-width: 1000px;
+        width: 90%;
+        background-color: #f00;
+        opacity: 0.70;
+        filter: alpha(opacity=70);
+
+        box-shadow: 0px 0px 10px 10px rgba(0, 0, f, 0.5);
+        border-radius: 20px 35px 20px 35px;
+    }
+
+    .contenedor-interno{
+        flex-direction: row-reverse; /*row | column | column-reverse*/
+        min-width: 450px;
+        max-width: 550px;
+        width: 90%;
+        background-color: #f00;
+        opacity: 0.70;
+        filter: alpha(opacity=70);
+        flex-wrap: wrap; /* Permitir que los elementos se ajusten a la siguiente fila si no caben */
+        gap: 10px;
+        box-shadow: 0px 0px 10px 10px rgba(0, 0, f, 0.5);
+        border-radius: 20px 35px 20px 35px;
+    }
+
+    #formulario
+    {
+        margin: 0 auto;
+        font-family: "Arial Black", Gadget, sans-serif;
+        border: rgb(81, 1, 1) dotted 3px;
+        color: #000;
+        box-shadow: 0px, 0px, 5px, 7px rgba(5, 0, 0, 0, 0.15);
+        border-radius: 45px 5px 45px 5px;
+    }
+
+    #formulario label{
+        display: block;
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+        font-size: 90%;
+        color: #000;
+        margin-top: 15px;
+    }
+    
+    #formulario input{
+        display: block;
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+        font-size: 90%;
+        color: #03f;
+        margin: 10px 10px 10px 10px;
+        width: 90%;
+        height: 40px;
+        padding: 3px 10px 3px 10px;
+        border-radius: 25px 25px 25px 25px;
+        box-sizing: border-box;
+    }
+
+    #infoContacto{
+        padding: 20px 10px 20px 10px;
+        border: rgb(81, 1, 1) dotted 3px;
+        color: #000;
+        box-shadow: 0px, 0px, 5px, 7px rgba(5, 0, 0, 0, 0.15);
+        border-radius: 45px 5px 45px 5px;
+    }
+
+    .button_submit{
+        font-family: "Arial Black", Gadget, sans-serif;
+        font-size: 80%;
+        color: rgb(255, 0, 0);
+        width: 40%;
+        height: 40px;
+        border-radius: 5px 5px 5px 5px;
+        border: none;
+    }
+
+    .button_reset{
+        font-family: "Arial Black", Gadget, sans-serif;
+        font-size: 80%;
+        color: rgb(156, 255, 85);
+        width: 40%;
+        height: 40px;
+        border-radius: 5px 5px 5px 5px;
+        border: none;
+    }
+
+.direccion {
+    font-size: 100%;
+    color: rgb(0, 0, 0);
+}
+
+.telefono{
+    font-size: 100%;
+    color: rgb(0, 0, 0);
+}
+
+.correo{
+    font-size: 90%;
+    color: rgb(0, 0, 0);
+}
+
+.horario{
+    font-size: 100%;
+    color: rgb(0, 0, 0);
+}
+
+hr{
+    border-top: 3px solid rgb(243, 91, 9);
+    border-bottom: 2px solid rgb(2, 10, 61);
+}
+
+.footer{
+    display: block;
+    font-size: 90%;
+    text-align: center;
+    margin-bottom: 5px;
+
+}
+
+.footer a{
+    display: block;
+    color: #FFF;
+}
+
+.footer a:hover{
+    display: block;
+    color: #FFF;
+    font-size:120%
+}
+
+}
+
+@media all and (max-width:820px){
+
+    #contenedorcentrado{
+        flex-direction: column-reverse;
+        min-height: 500px;
+        max-width: 850px;
+        width: 90%;
+        background-color: rgb(48, 74, 203);
+        opacity: 0.70;
+        filter: alpha(opacity=70);
+        box-shadow: 0px 0px 10px 10px rgba(0, 0, f, 0.4);
+        border-radius: 20px 35px 20px 35px; 
+    }
+
+    .contenedor-interno{
+        flex-direction: column; /*row | column | column-reverse*/
+        min-height: 500px;
+        max-width: 850px;
+        width: 90%;
+        background-color: rgb(9, 35, 139);
+        opacity: 0.70;
+        filter: alpha(opacity=70);
+        box-shadow: 0px 0px 10px 10px rgba(0, 0, f, 0.4);
+        border-radius: 20px 35px 20px 35px; 
+    }
+
+
+    #formulario{
+        margin: 0 auto;
+        margin-bottom: 30px;
+        font-family: 'Courier New', Courier, monospace;
+        background-color: #03f;
+        border: #000 solid 3px;
+    }
+
+    #infoContacto{
+        margin: auto;
+        margin-top: 30px;
+        margin-bottom: 30px;
+        padding: 25px 15px 25px 15px;
+        background-color: rgb(56, 96, 253);
+        border: rgb(6, 6, 73) solid 4px;
+    }
+
+    hr{
+        border-top: 2px solid #0f0;
+        border-bottom: 2px thin #f00;
+    }
+
+    .button_submit{
+        font-family: 'Courier New', Courier, monospace;
+        font-size: 60%;
+        color: rgb(0, 255, 0);
+        width: 40%;
+        height: 30px;
+        border-radius: 25px 25px 25px 25px;
+        border: none;
+    }
+
+    .button_reset{
+        font-family: 'Courier New', Courier, monospace;
+        font-size: 60%;
+        color: rgb(147, 85, 255);
+        width: 40%;
+        height: 30px;
+        border-radius: 25px 25px 25px 25px;
+        border: none;
+    }
+
+}
+
+@media all and (max-width:500px){
+
+    #contenedorcentrado{
+        flex-direction: column-reverse;
+        min-width: 280px;
+        max-width: 500px;
+        width: 90%;
+        background-color: rgb(25, 147, 19);
+        opacity: 0.70;
+        filter: alpha(opacity=70);
+        box-shadow: 0px 0px 10px 10px rgba(0, 0, f, 0.4);
+        border-radius: 20px 35px 20px 35px; 
+    }
+
+    .contenedor-interno{
+        flex-direction: column-reverse;
+        min-width: 280px;
+        max-width: 500px;
+        width: 90%;
+        background-color: rgb(8, 79, 29);
+        opacity: 0.70;
+        filter: alpha(opacity=70);
+        box-shadow: 0px 0px 10px 10px rgba(0, 0, f, 0.4);
+        border-radius: 20px 35px 20px 35px; 
+    }
+
+    #formulario{
+        margin: 0 auto;
+        margin-top: 30px;
+        margin-bottom: 30px;
+        font-family: Arial, Helvetica, sans-serif;
+        background-color: #0f0;
+        border: rgb(3, 46, 3) dotted 3px;
+    }
+
+
+    #infoContacto{
+        margin: auto;
+        margin-bottom: 30px;
+        padding: 25px 10px 25px 10px;
+        background-color: rgb(14, 121, 14);
+        border: rgb(6, 77, 6) dotted 3px;
+    }
+
+    .button_submit{
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 60%;
+        color: #55f;
+        width: 40%;
+        height: 25px;
+        border-radius: 15px 15px 15px 15px;
+        border: none;
+    }
+
+    .button_reset{
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 60%;
+        color: #f00;
+        width: 40%;
+        height: 25px;
+        border-radius: 15px 15px 15px 15px;
+        border: none;
+    }
+
+}
